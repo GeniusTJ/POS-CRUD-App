@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import FoodTileContainer from './components/FoodTypeTile/FoodTileContainer.js'
-import ItemTileContainer from './components/ItemTiles/ItemTileContainer';
+
 import SingleItem from './components/ItemTiles/SingleItem';
 import UpperNavBar from './components/NavBar/UpperNavBar';
 import RecentOrderContainer from './components/RecentOrders/RecentOrderContainer'
@@ -26,7 +26,7 @@ function App() {
        <div className="innerCenter">
        <FoodTileContainer />
        <PriceViewerContainer />
-       <ItemTileContainer />   
+       
        </div>
        </div>    
        <CartItemContainer />

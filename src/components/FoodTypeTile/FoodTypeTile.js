@@ -4,7 +4,8 @@ import classes from './FoodTypeTile.module.css';
 
 const FoodTypeTile = (props) => {
   const [mouseState, setMouseEntered] = useState(false);
-
+  const foodtype = props.foodType;
+  const onPress = props.onPress;
   const mouseEnterHandler = () => {
     setMouseEntered(true);
   };
@@ -12,35 +13,34 @@ const FoodTypeTile = (props) => {
   const mouseLeaveHandler = () => {
     setMouseEntered(false);
   };
+ 
+  const fetchItems = (foodType) => {
+    console.log("fetch items");
+    api 
+      .get(`/api/${foodType}`)
+      .then((response) => {
+        const items = response.data;
+        console.log(items);
+      })
+      .catch((error) => {
+        console.error(`Failed to fetch ${foodType} items:`, error);
+      });
+  };
 
-  // const fetchItems = (foodType) => {
-  //   api 
-  //     .get(`/api/${foodType}`)
-  //     .then((response) => {
-  //       const items = response.data;
-  //       console.log(items);
-  //     })
-  //     .catch((error) => {
-  //       console.error(`Failed to fetch ${foodType} items:`, error);
-  //     });
-  // };
 
-  // const handleClick = () => {
-  //   const { foodType } = props;
-  //   fetchItems(foodType);
-  // };
-
-  useEffect(() => {
-    // Perform any initial data fetching or setup here if needed
-  }, []);
 
   return (
     <div
-      // onClick={handleClick}
+      
       className={classes.outer}
       onMouseEnter={mouseEnterHandler}
       onMouseLeave={mouseLeaveHandler}
-      style={{ backgroundColor: !mouseState ? props.defColor : props.onColor }}
+      style={{ backgroundColor:   !mouseState ? props.defColor : props.onColor }}
+    
+      onClick={() => {
+        fetchItems(foodtype);
+        onPress(foodtype);
+  }}
     >
       <img className={classes.image} src={props.source} alt="" />
       <div className={classes.titleHolder}>

@@ -7,11 +7,11 @@ const DrinksItem = require('./drinks');
 const DessertsItem = require('./desserts');
 const SoupsItem = require('./soups');
 
-router.get('/:foodType', function(req, res) {
+router.get('/:foodType',async function(req, res ) {
   const { foodType } = req.params; // Retrieve the foodType parameter from the request URL
   
   if (foodType === 'breakfast') {
-    BreakfastItem.find()
+    await BreakfastItem.find()
       .then((items) => {
         res.status(200).json(items);
       })
@@ -20,7 +20,7 @@ router.get('/:foodType', function(req, res) {
         res.status(500).json({ error: 'Internal Server Error' });
       });
   } else if (foodType === 'lunch') {
-    LunchItem.find()
+    await LunchItem.find()
       .then((items) => {
         res.status(200).json(items);
       })
@@ -29,7 +29,7 @@ router.get('/:foodType', function(req, res) {
         res.status(500).json({ error: 'Internal Server Error' });
       });
   } else if (foodType === 'dinner') {
-    DinnerItem.find()
+    await DinnerItem.find()
       .then((items) => {
         res.status(200).json(items);
       })
