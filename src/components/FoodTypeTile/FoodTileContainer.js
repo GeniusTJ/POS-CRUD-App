@@ -9,12 +9,7 @@ import img3 from '../../assests/dinner.png'
 import img4 from '../../assests/drinks.png'
 import img5 from '../../assests/lunch.png'
 import img6 from '../../assests/soup.png'
-<<<<<<< Updated upstream
-// import SingleItem from '../ItemTiles/SingleItem';
-// this is foodtile
-=======
 
->>>>>>> Stashed changes
 
 const FoodTileContainer = (props) => {
   const [type,setType] = useState('breakfast');
