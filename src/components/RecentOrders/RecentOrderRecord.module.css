@@ -1,0 +1,23 @@
+.recordContainer{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0.9rem;
+    border-bottom: rgba(255,255,255,0.5) solid 1px;
+}
+.status{
+    font-family: 'Poppins';
+    font-size: 0.1em;
+    font-weight: 800;
+    border-radius: 6px;
+    background-color: #2980B9;
+    color: white;
+    padding: 0.3rem;
+    display: block;
+    margin-left: 0.5rem;
+}
+.orderID{
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+}

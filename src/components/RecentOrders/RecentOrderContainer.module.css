@@ -1,0 +1,25 @@
+.container{
+    /* height: 60vh; */
+   position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 21.5%;
+    height: 70%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: #464646;
+    border-radius: 8px;
+    align-items: center;
+    /* position: absolute;
+    bottom: 1rem; */
+    margin-left: 1rem;
+    bottom: -35%;
+    
+}
+.title{
+   font-family: 'Poppins';
+   font-weight: 700;
+   color: #B0B0B0;
+   margin-top: 1rem;
+   margin-bottom: 2rem;
+}

@@ -1,0 +1,18 @@
+.container{
+    position: absolute;
+    width: 30%;
+    height: 53%;
+    background-color: #464646;
+    padding: 1rem;
+    border-radius: 8px;
+    left: 59rem;
+    top:32rem;
+} 
+.title{
+   font-family: 'Roboto';
+   font-weight: 700;
+   font-size: 1rem;
+   color: white; 
+   display: block;
+   margin-top: 10rem;
+}

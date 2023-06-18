@@ -1,0 +1,10 @@
+.container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+   left: 350px;
+    flex-wrap: wrap;
+    top: 193.8px;
+}

@@ -1,0 +1,31 @@
+.container{
+   position: absolute;
+   display: flex;
+   flex-direction: row; 
+   justify-content: space-around;
+   height: 55.5vh;
+   overflow-y: scroll;
+   flex-wrap: wrap;
+   width: 40%;
+   left: 350px;
+   top: 500px;
+    
+   border-bottom: 30px solid transparent;
+    border-image: linear-gradient(0.25turn, #2D2D2D(21, 21, 38), #2D2D2D(215, 210, 213, 0.5),#2D2D2D(6, 6, 7, 0.5));
+    border-image-slice: 1;
+    width:40%; 
+}
+  
+
+.container::-webkit-scrollbar{
+   display: none;
+}
+.container::after {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   
+ }
+ 

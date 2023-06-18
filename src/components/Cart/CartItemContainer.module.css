@@ -1,0 +1,12 @@
+.container{
+    position: absolute;
+    width: fit-content;
+    height: 50vh;
+    overflow-y: scroll;
+    left: 59rem;
+    top: 11.6rem;
+     
+}
+.container::-webkit-scrollbar{
+    display: none;
+}
